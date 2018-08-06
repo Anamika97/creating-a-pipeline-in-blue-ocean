@@ -12,5 +12,10 @@ pipeline {
         sh 'npm install nodemon --no-optional'
       }
     }
+    stage('Test') {
+      steps {
+        sh './jenkins/scripts/test.sh'
+      }
+    }
   }
 }
